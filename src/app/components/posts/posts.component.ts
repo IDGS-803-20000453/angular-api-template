@@ -49,6 +49,7 @@ export class PostsComponent implements OnInit {
   
     dialogRef.afterClosed().subscribe((result) => {
       if (result) {
+        console.log(result);
         this.apiService.createItem(result).subscribe(() => {
           this.fetchPosts();
         });
@@ -64,6 +65,7 @@ export class PostsComponent implements OnInit {
   
     dialogRef.afterClosed().subscribe((result) => {
       if (result) {
+        console.log(result);
         this.apiService.updateItem(element.id, result).subscribe(() => {
           this.fetchPosts();
         });
